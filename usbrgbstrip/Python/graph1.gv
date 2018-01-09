@@ -1,0 +1,18 @@
+digraph G {
+disco->strip;
+donut->strip;
+epilepsy->strip;
+mono->strip;
+mood->strip;
+off->strip;
+rainbow_highlevel->strip;
+run->strip;
+status->strip;
+rainbow_lowlevel;
+
+{rank=same; strip; rainbow_lowlevel;}
+
+strip -> led;
+rainbow_lowlevel->led;
+led[shape=box, label="RGB LED"];
+}
