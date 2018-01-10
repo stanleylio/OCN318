@@ -24,12 +24,13 @@ def rainbow(length,shift=0,spread=1,saturation=1,brightness=1):
 
 if '__main__' == __name__:
 
-    DISP_LENGTH = 16
+    DISP_LENGTH = 8
+    PORT = 'COM10'
+
     BRIGHTNESS = 0.05
-    SATURATION = 0.75
-    SPREAD = 2.0
+    SATURATION = 1.0
+    SPREAD = 1.0
     STEP_DEGREE = 1
-    PORT = '/dev/ttyACM2'
 
     with Serial(PORT,115200*4,timeout=0.5) as s:
 

@@ -6,13 +6,13 @@ from colorsys import hsv_to_rgb
 from strip import Strip
 
 
-DISP_LENGTH = 16
-PORT = 'COM10'
+DISP_LENGTH = 8
+PORT = 'COM43'
 
 with Strip(DISP_LENGTH,PORT) as strip:
     while True:
         try:
-            c = hsv_to_rgb(random(),1,random()**2)
+            c = hsv_to_rgb(random(),1,0.05)
             for k in range(DISP_LENGTH):
                 strip.set_bit(k,c)
                 time.sleep(0.01*random())

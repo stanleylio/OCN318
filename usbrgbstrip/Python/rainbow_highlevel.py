@@ -4,7 +4,9 @@ from colorsys import hsv_to_rgb
 from strip import Strip
 
 
-DISP_LENGTH = 16
+DISP_LENGTH = 8
+PORT = 'COM10'
+
 BRIGHTNESS = 0.05
 SATURATION = 1.0
 SPREAD = 1.0
@@ -26,7 +28,7 @@ def rainbow(shift=0,spread=1,saturation=1,brightness=1):
 
 
 if '__main__' == __name__:
-    with Strip(DISP_LENGTH,'COM43') as strip:
+    with Strip(DISP_LENGTH,PORT) as strip:
 
         deg = 0
 

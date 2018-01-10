@@ -73,9 +73,10 @@ if '__main__' == __name__:
     # so just check for those.
     # - - - - -
 
-    LENGTH = 16
-    BRIGHTNESS = 0.03
+    LENGTH = 8
     PORT = 'COM10'
+
+    BRIGHTNESS = 0.03
 
     with Strip(LENGTH,PORT) as strip:
         while True:

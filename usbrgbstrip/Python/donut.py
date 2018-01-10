@@ -4,7 +4,7 @@ import time, math
 from strip import Strip
 
 
-DISP_LENGTH = 16
+DISP_LENGTH = 8
 PORT = 'COM10'
 
 with Strip(DISP_LENGTH,PORT) as strip:

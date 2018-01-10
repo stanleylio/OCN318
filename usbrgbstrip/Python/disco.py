@@ -7,8 +7,8 @@ from colorsys import hsv_to_rgb
 from strip import Strip
 
 
-DISP_LENGTH = 16
-PORT = 'COM10'
+DISP_LENGTH = 8
+PORT = 'COM43'
 
 with Strip(DISP_LENGTH,PORT) as strip:
     while True:

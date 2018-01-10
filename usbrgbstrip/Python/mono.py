@@ -3,9 +3,10 @@
 from strip import Strip
 
 
-DISP_LENGTH = 16
+DISP_LENGTH = 8
+PORT = 'COM43'
 
-strip = Strip(DISP_LENGTH,'COM10')
+strip = Strip(DISP_LENGTH,PORT)
 
 color = (0,0.1,0.07)
 for k in range(DISP_LENGTH):

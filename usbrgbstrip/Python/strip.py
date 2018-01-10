@@ -87,11 +87,12 @@ if '__main__' == __name__:
 
     patterns = cycle([(0.005,0,0),(0,0.005,0),(0,0,0.005)])
 
-    DISP_LENGTH = 16
+    DISP_LENGTH = 8
+    PORT = 'COM10'
     
-    with Strip(DISP_LENGTH,'COM10') as strip:
-        for k in range(DISP_LENGTH):
-            strip.set_bit(k,color=next(patterns))
+    strip = Strip(DISP_LENGTH,PORT)
+    for k in range(DISP_LENGTH):
+        strip.set_bit(k,color=next(patterns))
 
     print('done.')
     

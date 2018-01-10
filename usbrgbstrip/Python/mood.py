@@ -7,11 +7,12 @@ from colorsys import hsv_to_rgb
 from strip import Strip
 
 
-DISP_LENGTH = 16
+DISP_LENGTH = 8
+PORT = 'COM10'
+
 BRIGHTNESS = 0.1
 SATURATION = 1.0
 STEP_DEGREE = 5
-PORT = 'COM10'
 
 
 
