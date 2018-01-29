@@ -1,0 +1,15 @@
+digraph G {
+disco->strip;
+run->strip;
+status->strip;
+
+strip -> led;
+donut->led;
+epilepsy->led;
+mono->led;
+mood->led;
+rainbow->led;
+analog_read->led;
+
+led[shape=box, label="RGB LED"];
+}

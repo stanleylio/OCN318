@@ -1,3 +1,9 @@
+# Show system status from the UH Coastal Monitoring project
+#
+# Stanley H.I. Lio
+# hlio@hawaii.edu
+# OCN318, S18
+
 import requests, time, traceback
 from datetime import datetime
 
@@ -74,7 +80,7 @@ if '__main__' == __name__:
     # - - - - -
 
     LENGTH = 8
-    PORT = 'COM10'
+    PORT = '/dev/ttyACM0'
 
     BRIGHTNESS = 0.03
 

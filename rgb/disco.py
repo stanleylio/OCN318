@@ -1,14 +1,17 @@
-#!/usr/bin/python3
 # random pixel with random colors at random time
+#
 # Stanley H.I. Lio
+# hlio@hawaii.edu
+# OCN318, S18
+
 import time
-from random import random,randint
+from random import random, randint
 from colorsys import hsv_to_rgb
 from strip import Strip
 
 
 DISP_LENGTH = 8
-PORT = 'COM43'
+PORT = '/dev/ttyACM0'
 
 with Strip(DISP_LENGTH,PORT) as strip:
     while True:

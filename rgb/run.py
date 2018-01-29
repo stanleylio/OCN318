@@ -1,19 +1,25 @@
-#!/usr/bin/python3
-# single pixel fixed color running light
+# Single-pixel chase light
+#
 # Stanley H.I. Lio
+# hlio@hawaii.edu
+# OCN318, S18
+
 import time, math
 from strip import Strip
 
 
-DISP_LENGTH = 16
-PORT = 'COM10'
+DISP_LENGTH = 8
+PORT = '/dev/ttyACM0'
+
 
 with Strip(DISP_LENGTH,PORT) as strip:
     while True:
         try:
             for k in range(DISP_LENGTH):
                 strip.set_bit(k,(0,.2,.2))
+                strip.set_bit(DISP_LENGTH - k - 1,(.1,.1,0))
                 time.sleep(0.01)
                 strip.clear_bit(k)
+                strip.clear_bit(DISP_LENGTH - k - 1)
         except KeyboardInterrupt:
             break

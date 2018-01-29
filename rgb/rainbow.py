@@ -1,6 +1,9 @@
-#!/usr/bin/python3
-# low-saturation rainbow
+# Washed-out rainbow
+#
 # Stanley H.I. Lio
+# hlio@hawaii.edu
+# OCN318, S18
+
 import time
 from serial import Serial
 from colorsys import hsv_to_rgb
@@ -25,24 +28,23 @@ def rainbow(length,shift=0,spread=1,saturation=1,brightness=1):
 if '__main__' == __name__:
 
     DISP_LENGTH = 8
-    PORT = 'COM10'
+    PORT = '/dev/ttyACM0'
 
     BRIGHTNESS = 0.05
-    SATURATION = 1.0
-    SPREAD = 1.0
+    SATURATION = 0.8
+    SPREAD = 0.8
     STEP_DEGREE = 1
 
     with Serial(PORT,115200*4,timeout=0.5) as s:
 
         deg = 0
-
         while True:
             try:
-                tmp = rainbow(DISP_LENGTH,shift=-deg/360.,spread=SPREAD,saturation=SATURATION,brightness=BRIGHTNESS)
+                c = rainbow(DISP_LENGTH,shift=-deg/360.,spread=SPREAD,saturation=SATURATION,brightness=BRIGHTNESS)
 
-                write_led_strip(s,tmp)
+                write_led_strip(s, c)
                 
-                #print('shift = {:5.1f} deg'.format(deg))
+                print('shift = {:5.1f} deg'.format(deg))
 
                 deg += STEP_DEGREE
                 deg %= 360
