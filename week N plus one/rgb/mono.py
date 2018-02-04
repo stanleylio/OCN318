@@ -9,7 +9,7 @@ from strip import write_led_strip
 
 
 DISP_LENGTH = 8
-PORT = '/dev/ttyACM0'
+PORT = 'put your serial port here!'
 
 
 with Serial(PORT, 115200, timeout=1) as ser:

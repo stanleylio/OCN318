@@ -11,7 +11,7 @@ from strip import Strip
 
 
 DISP_LENGTH = 8
-PORT = '/dev/ttyACM0'
+PORT = 'put your serial port here!'
 
 with Strip(DISP_LENGTH,PORT) as strip:
     while True:

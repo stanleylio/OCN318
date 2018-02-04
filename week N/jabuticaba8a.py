@@ -15,7 +15,7 @@
 # use someone else's library
 import matplotlib.pyplot as plt
 
-plt.xkcd()
+#plt.xkcd()
 
 # plot the third column
 D = []

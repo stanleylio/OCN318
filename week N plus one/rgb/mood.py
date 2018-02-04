@@ -11,7 +11,7 @@ from strip import write_led_strip
 
 
 DISP_LENGTH = 8
-PORT = '/dev/ttyACM0'
+PORT = 'put your serial port here!'
 
 
 BRIGHTNESS = 0.1

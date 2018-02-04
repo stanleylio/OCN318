@@ -1,6 +1,6 @@
 # More plotting
 #
-# You'd better know how to use lists.
+# You'd better know how to use a list.
 #
 # Reading (optional):
 #   filter()
@@ -16,10 +16,10 @@
 
 
 # this is how you fetch a file from the internet
-import requests
-url = 'https://www.ncei.noaa.gov/data/global-hourly/access/2017/02020099999.csv'
-lines = requests.get(url).text.split('\n')
-print('{} rows, {} columns (variables)'.format(len(lines), len(lines[0])))
+#import requests
+#url = 'https://www.ncei.noaa.gov/data/global-hourly/access/2017/02020099999.csv'
+#lines = requests.get(url).text.split('\n')
+#print('{} rows, {} columns (variables)'.format(len(lines), len(lines[0])))
 
 # or if you don't want to hammer NOAA's server
 lines = open('02020099999.csv').readlines()

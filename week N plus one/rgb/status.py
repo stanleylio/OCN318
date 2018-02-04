@@ -80,7 +80,7 @@ if '__main__' == __name__:
     # - - - - -
 
     LENGTH = 8
-    PORT = '/dev/ttyACM0'
+    PORT = 'put your serial port here!'
 
     BRIGHTNESS = 0.03
 

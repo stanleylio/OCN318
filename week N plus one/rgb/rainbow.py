@@ -28,7 +28,7 @@ def rainbow(length,shift=0,spread=1,saturation=1,brightness=1):
 if '__main__' == __name__:
 
     DISP_LENGTH = 8
-    PORT = '/dev/ttyACM0'
+    PORT = 'put your serial port here!'
 
     BRIGHTNESS = 0.05
     SATURATION = 0.8
