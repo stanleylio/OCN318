@@ -1,6 +1,7 @@
 # Time Series Example: Beat-per-minute (BPM) Estimation
 #
 # Tap (RETURN) to the music and get an estimate of the BPM of the song (or heart rate, or traffic...)
+# Hit Ctrl + C to terminate.
 #
 # Try it on this:
 # https://youtu.be/mrZRURcb1cM
