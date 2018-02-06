@@ -17,7 +17,8 @@ D = []
 for i in range(100):
     
     D.append(random())
-    
+
+    plt.clf()
     plt.plot(D, 'r')
     plt.grid(True)
     plt.pause(0.05)
