@@ -1,5 +1,12 @@
 # Helper functions for talking to the RGB strip through USB.
 #
+# The LED strip expects a string that begins with "rgb" and ends with "\n". In between are the
+# RGB values for each of the LEDs. For every LED, each RGB value (r,g,b) is represented as
+# three hexadecimal numbers. So (218, 190, 239) becomes:
+#   "dabeef"
+# To send this to the LED strip, you send this string:
+#   "rgbdabeef\n"
+#
 # Stanley H.I. Lio
 # hlio@hawaii.edu
 # OCN318, S18
@@ -9,14 +16,21 @@ import time
 
 
 def write_led_strip(s, pixels):
-    """pixels is a list of lists: [[r0,g0,b0],[r1.g1,b1],...]. All numbers are within [0,1.0]."""
-    # map [0,1.0] (float) to [0,255] (integer)
+    """pixels is a list of lists: [[r0,g0,b0],[r1,g1,b1],...]. All numbers are within [0,1.0]."""
+    # map a float in [0,1.0] to an integer in [0,255]
     tmp = [tuple(int(255*v) for v in pixel) for pixel in pixels]
+    
     # flatten the list of lists
     # "[leaf for tree in forest for leaf in tree]" from SO
     # https://stackoverflow.com/questions/952914/making-a-flat-list-out-of-list-of-lists-in-python
+    # basically turns this: [[r0,g0,b0],[r1,g1,b1],...]
+    # into this: [r0,g0,b0,r1,g1,b1,...]
     tmp = [v for c in tmp for v in c]
+
+    # for every number, format it as a string of two hexadecimal digits
     tmp = ['{:02x}'.format(v) for v in tmp]
+
+    # send it to the controller
     tmp = 'rgb' + ''.join(tmp) + '\n'
     s.write(tmp.encode())
 

@@ -5,7 +5,7 @@
 # OCN318, S18
 
 import time, math
-from random import random,randint
+from random import random
 from colorsys import hsv_to_rgb
 from serial import Serial
 from strip import write_led_strip
