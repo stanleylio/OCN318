@@ -3,7 +3,7 @@
 # Quite a few things should be improved. Here's a few:
 #   What's the X axis? An axis of time would be more meaningful than an axis of sample index.
 #   What's the sampling rate? Is it stable? How much does it fluctuate?
-#   Can we store the data as well?
+#   Can we store the data?
 #   Multiple channels on the same graph?
 #   Error handling: what happen if/when float() fails? (it raises a ValueError)
 #   How does this compare to matplotlib.animation? https://matplotlib.org/api/animation_api.html
@@ -12,7 +12,8 @@
 # hlio@hawaii.edu
 # OCN318, S18
 
-import time, math
+import time, math, sys
+sys.path.append('../week6')
 from serial import Serial
 from strip import write_led_strip
 import matplotlib.pyplot as plt

@@ -1,17 +1,9 @@
-# Time Series Example: Beat-per-minute (BPM) Estimation
+# Time Series example: Beat-per-minute (BPM) Estimation
 #
-# Tap (RETURN) to the music and get an estimate of the BPM of the song (or heart rate, or traffic...)
+# Run it and tap (RETURN) repeatedly.
 # Hit Ctrl + C to terminate.
 #
-# Try it on this:
-# https://youtu.be/mrZRURcb1cM
-# Check it with this:
-# https://songbpm.com/dreams-fleetwood-mac?q=dreams%20fleetwood%20mac
-#
-# Or this:
-# https://youtu.be/JfajQ4_hSN0?t=23
-#
-# Not related, but "What do programmers actually do?"
+# "What do programmers actually do?"
 # https://youtu.be/g4a7_HH9Wbg
 #
 # Stanley H.I. Lio
@@ -74,6 +66,6 @@ plt.title('Distribution of intervals')
 plt.show()
 
 # Questions:
-# How many taps do you actually need to get N decimal places precision?
-# How long a clip do you need to get N decimal places given that the song is X BPM?
+# How many taps do you need to get N decimal places precision?
+# Given that a song is X BPM, how long does it need to be to get N decimal places?
 # Someone calculates the confidence interval...

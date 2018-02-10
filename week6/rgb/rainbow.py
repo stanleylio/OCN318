@@ -10,7 +10,7 @@ from colorsys import hsv_to_rgb
 from strip import write_led_strip
 
 
-def rainbow(length,shift=0,spread=1,saturation=1,brightness=1):
+def rainbow(length, shift=0, spread=1, saturation=1, brightness=1):
     assert length > 0
     assert shift >= -1 and shift <= 1
     assert spread >= 0
@@ -18,11 +18,11 @@ def rainbow(length,shift=0,spread=1,saturation=1,brightness=1):
     assert brightness >= 0 and brightness <= 1
 
     H = range(length)                   # {0..length-1}
-    H = [h/(length-1) for h in H]       # {0..1}
+    H = [h/(length - 1) for h in H]     # {0..1}
     H = [spread*h for h in H]           # {0..spread}
-    H = [(h+shift)%1 for h in H]        # circular-shifted in the hue space
+    H = [(h + shift)%1 for h in H]      # circular-shifted in the hue space
 
-    return [hsv_to_rgb(h,saturation,brightness) for h in H]
+    return [hsv_to_rgb(h, saturation, brightness) for h in H]
 
 
 if '__main__' == __name__:
@@ -35,12 +35,12 @@ if '__main__' == __name__:
     SPREAD = 0.8
     STEP_DEGREE = 1
 
-    with Serial(PORT,115200*4,timeout=0.5) as s:
+    with Serial(PORT, 115200*4, timeout=0.5) as s:
 
         deg = 0
         while True:
             try:
-                c = rainbow(DISP_LENGTH,shift=-deg/360.,spread=SPREAD,saturation=SATURATION,brightness=BRIGHTNESS)
+                c = rainbow(DISP_LENGTH, shift=-deg/360., spread=SPREAD, saturation=SATURATION, brightness=BRIGHTNESS)
 
                 write_led_strip(s, c)
                 

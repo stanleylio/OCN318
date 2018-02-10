@@ -1,0 +1,38 @@
+\documentclass[letter,10pt]{article}
+
+\usepackage{amsmath}
+%\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+%\usepackage[ngerman,english]{babel}
+%\usepackage{hyperref}
+%\usepackage{graphicx}
+%\usepackage{listings}
+%\usepackage{adjustbox}
+%\usepackage[affil-it]{authblk}
+%\usepackage[T1]{fontenc}
+%\usepackage{lmodern}
+%\usepackage[space]{grffile}
+\usepackage{hyperref}
+
+\begin{document}
+
+
+
+\section*{Note on Analog-to-Digital Converter (ADC)}
+
+``What does the ADC output mean? What are those big numbers?''
+
+\subsection*{Resolution}
+An ADC linearly maps an input voltage to a range of numbers. The ADC we use has a 5V reference and is a 10-bit ADC, so it maps an input voltage between 0 and 5V to a number between 0 to $2^{10} - 1$:
+\begin{equation}
+ADC = V_{input} / V_{ref} * 2^{10} = V_{input} / 5V * 1024
+\end{equation}
+(Reality is a bit more complicated than that. Divide by 1023 or 1024, which is correct? Or does it matter?)\\
+\\
+For example, if the ADC outputs 365, then the voltage of the input is
+\begin{equation}
+\frac{365}{1024}*5V = 1.78V
+\end{equation}
+You should verify this with a voltmeter. Also try to verify that the reference voltage is indeed (not exactly) 5V. How does that affect your measurement?
+
+\end{document}

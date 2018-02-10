@@ -1,5 +1,8 @@
 # 8-LED stick as volume display for analog voltage
 #
+# "As I hurtled through space, one thought kept crossing my mind - every part
+# of this rocket was supplied by the lowest bidder."
+#
 # Stanley H.I. Lio
 # hlio@hawaii.edu
 # OCN318, S18

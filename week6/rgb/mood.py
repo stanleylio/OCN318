@@ -25,7 +25,7 @@ with Serial(PORT, 115200, timeout=1) as ser:
 
     while True:
         try:
-            c = hsv_to_rgb(deg/360,SATURATION,BRIGHTNESS)
+            c = hsv_to_rgb(deg/360, SATURATION, BRIGHTNESS)
             write_led_strip(ser, [c]*DISP_LENGTH)
 
             print('hue = {:5.1f} deg'.format(deg))

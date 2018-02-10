@@ -4,7 +4,7 @@
 # hlio@hawaii.edu
 # OCN318, S18
 
-import time, math
+import time
 from random import random
 from colorsys import hsv_to_rgb
 from serial import Serial

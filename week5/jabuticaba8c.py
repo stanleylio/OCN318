@@ -23,5 +23,7 @@ for i in range(100):
     plt.grid(True)
     plt.pause(0.05)
 
+    while len(D) > 100:
+        D.pop(0)
 
 plt.ioff()

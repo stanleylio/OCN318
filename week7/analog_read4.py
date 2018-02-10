@@ -1,12 +1,8 @@
-# Plot a single analog voltage channel
+# Plot temperature readings.
 #
-# Quite a few things should be improved. Here's a few:
-#   What's the X axis? An axis of time would be more meaningful than an axis of sample index.
-#   What's the sampling rate? Is it stable? How much does it fluctuate?
-#   Can we store the data as well?
-#   Multiple channels on the same graph?
-#   Error handling: what happen if/when float() fails? (it raises a ValueError)
-#   How does this compare to matplotlib.animation? https://matplotlib.org/api/animation_api.html
+# "In indoor farming, we see a lot of competition focus on how data will drive
+# yield increases, yet they haven't figured out how to regulate air temperature
+# in their facility".
 #
 # Stanley H.I. Lio
 # hlio@hawaii.edu
@@ -21,7 +17,7 @@ from therm1 import v2t
 plt.ion()
 
 
-PORT = 'COM20'
+PORT = 'put your serial port here!'
 N = 100
 CH = 0
 
