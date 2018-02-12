@@ -92,4 +92,4 @@ f.close()
 316,24.539,103.72
 ...
 '''
-# (the first and second columns are index. third, temperature, and fourth, pressure in kPa.)
+# The first and second columns are index, which is a proxy to time. The third is temperature in Deg.C, and the fourth, pressure in kPa.

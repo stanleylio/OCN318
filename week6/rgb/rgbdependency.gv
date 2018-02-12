@@ -1,0 +1,15 @@
+digraph G
+{
+node[shape=box];
+
+pretty_light[label="LED Light Strip"];
+rgb_hsv[label="RGB-HSV conversion"];
+serial_port[label="Serial Port Access"];
+timing[label="Python - Timing"];
+control_flow[label="Python - Control Flow"];
+
+pretty_light->rgb_hsv;
+pretty_light->serial_port;
+pretty_light->timing;
+pretty_light->control_flow[label="requires"];
+}

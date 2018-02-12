@@ -1,0 +1,10 @@
+digraph G
+{
+node[shape=box];
+
+thermistor->voltage_divider;
+voltage_divider->adc[label="0~5V"];
+adc->voltage;
+voltage->resistance;
+resistance->temperature[label="datasheet"];
+}
