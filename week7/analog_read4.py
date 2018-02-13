@@ -9,7 +9,7 @@
 # OCN318, S18
 
 import time, math, sys
-sys.path.append('../week6/rgb')
+sys.path.append('rgb')
 from serial import Serial
 from strip import write_led_strip
 import matplotlib.pyplot as plt
