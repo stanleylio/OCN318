@@ -10,10 +10,9 @@ from strip import write_led_strip
 
 
 DISP_LENGTH = 8
-PORT = 'put your serial port here!'
 
 
-with Serial(PORT, 115200, timeout=1) as ser:
+with Serial(input('PORT='), 115200, timeout=1) as ser:
     r = [(1,0,0)]*DISP_LENGTH
     b = [(0,0,1)]*DISP_LENGTH
     off = [(0,0,0)]*DISP_LENGTH

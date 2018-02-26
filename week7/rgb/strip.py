@@ -94,9 +94,8 @@ if '__main__' == __name__:
     patterns = cycle([(0.005, 0, 0), (0, 0.005, 0), (0, 0, 0.005)])
 
     DISP_LENGTH = 8
-    PORT = 'put your serial port here!'
     
-    strip = Strip(DISP_LENGTH,PORT)
+    strip = Strip(DISP_LENGTH, input('PORT='))
     for k in range(DISP_LENGTH):
         strip.set_bit(k, color=next(patterns))
 
