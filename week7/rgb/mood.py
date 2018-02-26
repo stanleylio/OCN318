@@ -11,7 +11,6 @@ from strip import write_led_strip
 
 
 DISP_LENGTH = 8
-PORT = 'put your serial port here!'
 
 
 BRIGHTNESS = 0.1
@@ -20,7 +19,7 @@ STEP_DEGREE = 1
 
 
 
-with Serial(PORT, 115200, timeout=1) as ser:
+with Serial(input('PORT='), 115200, timeout=1) as ser:
     deg = 0
 
     while True:

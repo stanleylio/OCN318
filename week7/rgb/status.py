@@ -80,11 +80,10 @@ if '__main__' == __name__:
     # - - - - -
 
     LENGTH = 8
-    PORT = 'put your serial port here!'
 
     BRIGHTNESS = 0.03
 
-    with Strip(LENGTH,PORT) as strip:
+    with Strip(LENGTH, input('PORT=')) as strip:
         while True:
             try:
                 state = get_state()

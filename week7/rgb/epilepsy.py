@@ -12,10 +12,9 @@ from strip import write_led_strip
 
 
 DISP_LENGTH = 8
-PORT = 'put your serial port here!'
 
 
-with Serial(PORT, 115200, timeout=1) as ser:
+with Serial(input('PORT='), 115200, timeout=1) as ser:
     while True:
         try:
             c = hsv_to_rgb(random(), 1, 0.05)

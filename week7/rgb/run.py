@@ -9,10 +9,9 @@ from strip import Strip
 
 
 DISP_LENGTH = 8
-PORT = 'put your serial port here!'
 
 
-with Strip(DISP_LENGTH, PORT) as strip:
+with Strip(DISP_LENGTH, input('PORT=')) as strip:
     while True:
         try:
             for k in range(DISP_LENGTH):

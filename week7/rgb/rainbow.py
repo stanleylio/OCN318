@@ -28,14 +28,13 @@ def rainbow(length, shift=0, spread=1, saturation=1, brightness=1):
 if '__main__' == __name__:
 
     DISP_LENGTH = 8
-    PORT = 'put your serial port here!'
 
     BRIGHTNESS = 0.05
     SATURATION = 0.8
     SPREAD = 0.8
     STEP_DEGREE = 1
 
-    with Serial(PORT, 115200*4, timeout=0.5) as s:
+    with Serial(input('PORT='), 115200*4, timeout=0.5) as s:
 
         deg = 0
         while True:
