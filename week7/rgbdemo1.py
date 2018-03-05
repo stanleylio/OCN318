@@ -5,7 +5,7 @@
 # OCN318, S18
 from serial import Serial
 
-ser = Serial('COM20', 115200, timeout=1)
+ser = Serial(input('PORT='), 115200, timeout=1)
 ser.write('rgb000000\n'.encode())
 ser.close()
 

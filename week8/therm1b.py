@@ -1,4 +1,4 @@
-# playing with thermistors
+# playing with thermistors (optional)
 #
 # Two things:
 #   1. t-r vs. t-log(r)
