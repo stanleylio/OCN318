@@ -1,22 +1,22 @@
 # 8-LED stick as volume display for analog voltage
 #
-# "As I hurtled through space, one thought kept crossing my mind - every part
-# of this rocket was supplied by the lowest bidder."
+# "As I hurtled through space, one thought kept crossing my mind - every part of this rocket
+# was supplied by the lowest bidder." --John Glenn, the first American astronaut to orbit Earth
 #
 # Stanley H.I. Lio
 # hlio@hawaii.edu
 # OCN318, S18
 
-import time, math
+import time, math, sys
+sys.path.append('../week7/rgb')
 from serial import Serial
 from strip import write_led_strip
 
 
 DISP_LENGTH = 8
-PORT = 'put your serial port here!'
 
 
-with Serial(PORT, 115200, timeout=1) as ser:
+with Serial(input('PORT='), 115200, timeout=1) as ser:
     
     while True:
 
