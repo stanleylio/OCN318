@@ -1,0 +1,9 @@
+
+Summary of course progress so far
+
+USB RGB soldering
+
+Hexadecimal numbers
+
+BMP280
+	leave it logging to CSV for a week

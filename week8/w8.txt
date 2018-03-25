@@ -1,0 +1,14 @@
+
+Quiz - plotting temperature data collected over the past week
+
+ADC, thermistor, temperature measurement
+
+measure resistance of thermistor with multimeter
+look up datasheet to get temperature
+automate this process in Python to build temperature sensor from the ground up
+
+
+measure resistance of 10k resistor
+measure voltage of 10k-10k voltage divider
+replace top resistor with 4.7k and measure voltage
+replace top resistor with thermistor and measure voltage

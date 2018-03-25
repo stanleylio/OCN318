@@ -1,0 +1,60 @@
+
+Collected homework
+Returned graded quiz
+
+Class demo:
+	Beat-per-minute estimation
+
+
+
+
+
+Homework:
+Convert this POSIX timestamp, 1518386711, to yyyy-mm-dd hh:mm:ss
+	You can do it in Python or look it up online. Hint: you will have to do it in Python eventually.
+Convert these hexadecimal numbers to decimal: A, FF, DEADBEEF, DECAF
+	You should know how to convert at least the first two on paper, <whisper>like on an exam</whisper>. You can use Python/calculator/Google for the remaining two.
+
+
+
+
+Course topics review:
+
+Time series, POSIX timestamps
+	BPM estimation
+
+Serial port; hexadecimal numbers
+	RGB LED stick
+
+ADC basics
+	Thermistor
+
+SSH, FTP, git; command line basics
+	Get code off github
+	Get file in and out of a remote machine
+	Run arbitrary commands on remote machine
+
+Control flow, timing; GPIO intro
+	LED blinky (while, for, time.sleep())
+	Push button
+
+File I/O; plotting intro
+	open()
+	Read: read(), readline(), readlines()
+	Write: difference between 'r', 'w', 'a'; the '\n' character
+
+Data structure
+	int, float, str, list, dict
+
+Function
+	celsius2fahrenheit(), fahrenheit2celsius()
+	liter2gallon(), gallon2liter()
+	mm2inch(), inch2mm()
+	mgL2uM(), uM2mgL()
+
+Electronics handling
+	Breadboard
+	Soldering
+	Wire and cable
+	Multimeter (continuity, resistance, and voltage)
+	Schematics basics: recognizing symbols for LED, resistor, capacitor, and battery (with polarity)

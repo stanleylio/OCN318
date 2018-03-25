@@ -1,0 +1,8 @@
+
+Measuring conductivity
+
+Six cups of water of unknown salinity, plus two cups of water with known salinity. Find the salinity of the six cups with an Atlas EZO EC sensor.
+
+Questions to consider:
+Resolution: can you resolve 100uS/cm? Your error bar?
+Effect of temperature?
