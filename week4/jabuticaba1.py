@@ -6,15 +6,13 @@
 #   Visualize collected data
 #   Not freak out when a sensor comes with an "I2C/RS232" interface
 #
-# I will be very sad if by the end of the class you still reach for your TI "graphing" calculator for labs and homework.
+# I will be very sad if by the end of the class you still reach for your TI "graphing" calculator for any lab and homework.
 #
 # Stanley H.I. Lio
 # hlio@hawaii.edu
-# OCN318, S18
-
+# OCN318, S18, S19
 
 # Basic Data Types: int, float, bool, string...
-
 
 # this defines a variable called "url" pointing to a STRING (more about this later):
 url = 'http://knowyourmeme.com/memes/x-x-everywhere'
@@ -43,14 +41,15 @@ print(a)
 # "What?!" https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html
 
 
-# boolean (True/False)
-false = True
-true = False
-print(true and true)
-print(false and false)
-print(false and true)
-print(false or true)
-
+# boolean
+# see: truth table
+# https://www.mathworks.com/help/matlab/matlab_prog/truth-table-for-logical-operations.html
+a = True
+b = False
+c = 3.14 > 3
+print(a and b)
+print(a or b)
+print(c)
 
 
 # TEST
@@ -62,7 +61,12 @@ print(a)
 
 a = 3.0
 b = 4
-print(type(a + b))
+print(a + b)
+
+a = '3.0'
+b = '4'
+print(a + b)
+
 
 
 
@@ -92,4 +96,8 @@ print(type(a + b))
 #
 # Undergraduation
 # http://www.paulgraham.com/college.html
-# "The programs you write in classes differ in three critical ways from the ones you'll write in the real world: they're small; you get to start from scratch; and the problem is usually artificial and predetermined. In the real world, programs are bigger, tend to involve existing code, and often require you to figure out what the problem is before you can solve it."
+# "The programs you write in classes differ in three critical ways from the ones
+# you'll write in the real world: they're small; you get to start from scratch;
+# and the problem is usually artificial and predetermined. In the real world, 
+# programs are bigger, tend to involve existing code, and often require you to
+# figure out what the problem is before you can solve it."

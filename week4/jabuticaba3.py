@@ -3,8 +3,7 @@
 #
 # Stanley H.I. Lio
 # hlio@hawaii.edu
-# OCN318, S18
-
+# OCN318, S18, S19
 
 
 # bread-and-butter: LIST
