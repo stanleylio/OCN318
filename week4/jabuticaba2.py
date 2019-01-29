@@ -106,9 +106,9 @@ a = "discouraged"
 print(len(a))
 b = 'truth, justice, and the American way'
 # count the number of words
-print(len(a.split(' ')))
+print(len(b.split(' ')))
 # what does this count?
-print(len(a.split(',')))
+print(len(b.split(',')))
 
 
 
