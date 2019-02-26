@@ -1,0 +1,45 @@
+20190225 class 6 topics:
+
+TSYS01
+	Soldering
+	Crimping JST-XH connector
+	Getting temperature readings via I2C
+	Saving data to CSV file
+	Conversion from Celsius to Fahrenheit
+	Plotting CSV file
+
+"IoT": TSYS01 readings broadcast to MQTT
+
+
+Homework:
+	Make a live plot of the temperature readings that you publish to the "cloud".
+	Bonus if you plot your classmates' readings as well.
+
+
+Recap:
+	The messaging protocol we used is MQTT.
+
+	The Python library we used is paho-mqtt.
+
+	The message broker is broker.hivemq.com
+		You can see the status of the broker here:
+			http://www.mqtt-dashboard.com/
+
+The channels we use are (case-sensitive!):
+	uhm/soest/ocn318/Diana/temperature
+	uhm/soest/ocn318/Ollie/temperature
+	uhm/soest/ocn318/rayna/temperature
+
+The message format is:
+	'{},{}'.format(timestamp, temperature_in_fahrenheit)
+
+Hint:
+	When handed a string 'item1,item2,item3...', you can split it into multiple strings with the .split() function:
+		'item1,item2,item3'.split(',')
+	This will give you a LIST of three strings.
+	
+	If there is a string that can be converted to a number, use the float() function:
+		float('25.00')
+
+	To round a number to N decimal places, use the round() function:
+		round(3.141592, N)

@@ -1,9 +1,14 @@
+# Listen in to the 'uhm/soest/ocn318/#' topic and print all messages to screen.
+#
 # Lots of free brokers out there. Be nice (don't spam).
-# https://github.com/mqtt/mqtt.github.io/wiki/public_brokers
+#   https://github.com/mqtt/mqtt.github.io/wiki/public_brokers
+#
 # We will use one of these:
 #   iot.eclipse.org
 #   test.mosquitto.org
 #   broker.hivemq.com
+#
+# pip3 install --upgrade paho-mqtt
 import paho.mqtt.client as mqtt
 
 
@@ -19,8 +24,6 @@ client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
-client.connect('iot.eclipse.org', port=1883, keepalive=60)
+client.connect('broker.hivemq.com', port=1883, keepalive=60)
 
 client.loop_forever()
-
-# "The S in IoT stands for Security."

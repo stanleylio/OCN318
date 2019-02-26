@@ -1,4 +1,6 @@
-# mock-sensor
+# Publish fake "temperature" readings to the 'uhm/soest/ocn318/demo/temperature' channel once a second.
+#
+# pip3 install --upgrade paho-mqtt
 import paho.mqtt.client as mqtt
 import random, time
 
