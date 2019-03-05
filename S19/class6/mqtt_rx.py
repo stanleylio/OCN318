@@ -6,7 +6,7 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe('uhm/soest/ocn318/#')
 
 def on_message(client, userdata, msg):
-    print(msg.topic + '\t' + str(msg.payload))
+    print(msg.topic + '\t' + msg.payload.decode())
 
 
 client = mqtt.Client()
